@@ -1,0 +1,5 @@
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\bin\Release\BlackJack.exe
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\bin\Release\BlackJack.pdb
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\obj\Release\BlackJack.csprojResolveAssemblyReference.cache
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\obj\Release\BlackJack.exe
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\obj\Release\BlackJack.pdb

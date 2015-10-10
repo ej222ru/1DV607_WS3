@@ -1,0 +1,7 @@
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.exe
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.pdb
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.exe
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.pdb
+E:\1DV607_WS3\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.csprojResolveAssemblyReference.cache
+E:\1DV607_WS3\obj\Debug\BlackJack.exe
+E:\1DV607_WS3\obj\Debug\BlackJack.pdb
