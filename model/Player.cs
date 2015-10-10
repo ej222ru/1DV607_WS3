@@ -32,7 +32,7 @@ namespace BlackJack.model
             }
         }
 
-        public int CalcScore()
+        public int CalcScore(bool testAceAsOne = true)
         {
             int[] cardScores = new int[(int)model.Card.Value.Count]
                 {2, 3, 4, 5, 6, 7, 8, 9, 10, 10 ,10 ,10, 11};
@@ -45,7 +45,7 @@ namespace BlackJack.model
                 }
             }
 
-            if (score > 21)
+            if (testAceAsOne && (score > 21))
             {
                 foreach (Card c in GetHand())
                 {
