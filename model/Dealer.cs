@@ -8,7 +8,8 @@ namespace BlackJack.model
     class Dealer : Player
     {
         private Deck m_deck = null;
-        private DistributeCard m_distributeCard = null;
+        
+        List<IBlackJackObserver> m_observers;
 
         private const int g_maxScore = 21;
 
@@ -21,6 +22,8 @@ namespace BlackJack.model
             m_newGameRule = a_rulesFactory.GetNewGameRule();
             m_hitRule = a_rulesFactory.GetHitRule();
             m_WinnerRule = a_rulesFactory.GetNewWinnerRule();
+
+            m_observers = new List<IBlackJackObserver>();
         }
 
         public bool NewGame(Player a_player)
@@ -28,11 +31,10 @@ namespace BlackJack.model
             if (m_deck == null || IsGameOver(a_player))
             {
                 m_deck = new Deck();
-                m_distributeCard = new DistributeCard();
 
                 ClearHand();
                 a_player.ClearHand();
-                return m_newGameRule.NewGame(m_deck, this, a_player, m_distributeCard);   
+                return m_newGameRule.NewGame(m_deck, this, a_player);   
             }
             return false;
         }
@@ -43,7 +45,7 @@ namespace BlackJack.model
 
             if (m_deck != null && (score <= g_maxScore) && !IsGameOver(a_player))
             {
-                m_distributeCard.NewCard(m_deck, a_player);
+                NewCard(m_deck, a_player);
                 /*
                 Card c;
                 c = m_deck.GetCard();
@@ -61,7 +63,7 @@ namespace BlackJack.model
             {
                 ShowHand();
                 while (m_hitRule.DoHit(this)){
-                    m_distributeCard.NewCard(m_deck, this);
+                    NewCard(m_deck, this);
                     /*
                     Card c = m_deck.GetCard();
                     c.Show(true);
@@ -86,6 +88,23 @@ namespace BlackJack.model
                 return true;
             }
             return false;
+        }
+
+        public void NewCard(Deck aDeck, Player aPlayer, bool showCard = true)
+        {
+            Card newCardFromDeck = aDeck.GetCard();
+            newCardFromDeck.Show(showCard);
+            aPlayer.DealCard(newCardFromDeck);
+
+            foreach (IBlackJackObserver observer in m_observers)
+            {
+                observer.newCardDelt();
+            }
+        }
+
+        public void AddSubscriber(IBlackJackObserver a_sub)
+        {
+            m_observers.Add(a_sub);
         }
     }
 }

@@ -6,30 +6,48 @@ using System.Text;
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame : model.IBlackJackObserver
     {
-        public bool Play(model.Game a_game, view.IView a_view)
+        model.Game m_game;
+        view.IView m_view;
+        public PlayGame(model.Game a_game, view.IView a_view)
         {
-            a_view.DisplayWelcomeMessage();
-            
-            a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
-            a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
+            m_game = a_game;
+            m_view = a_view;
+            a_game.AddSubscriber(this);
+        }
+        private void Display()
+        {
+            m_view.DisplayWelcomeMessage();
 
-            if (a_game.IsGameOver())
+            m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+            m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
+
+            if (m_game.IsGameOver())
             {
-                a_view.DisplayGameOver(a_game.IsDealerWinner());
+                m_view.DisplayGameOver(m_game.IsDealerWinner());
             }
+        }
 
-            UserAction userAction = a_view.GetUserAction();
+        public bool Play()
+        {
+            Display();
+            UserAction userAction = m_view.GetUserAction();
             switch (userAction)
             {
-                case UserAction.Play :  { a_game.NewGame(); break; }
-                case UserAction.Hit :   { a_game.Hit(); break; }
-                case UserAction.Stand : { a_game.Stand(); break; }
+                case UserAction.Play:   { m_game.NewGame(); break; }
+                case UserAction.Hit:    { m_game.Hit(); break; }
+                case UserAction.Stand:  { m_game.Stand(); break; }
                 case UserAction.Quit :  { return false; }
                 default: break;    
             }
             return true;
         }
+        public void newCardDelt()
+        {
+            Display();
+            System.Threading.Thread.Sleep(4000);
+        }
+
     }
 }

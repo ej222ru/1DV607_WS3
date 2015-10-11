@@ -7,6 +7,6 @@ namespace BlackJack.model.rules
 {
     interface INewGameStrategy
     {
-        bool NewGame(Deck aDeck, Dealer aDealer, Player aPlayer, DistributeCard distributeCard);
+        bool NewGame(Deck aDeck, Dealer aDealer, Player aPlayer);
     }
 }
