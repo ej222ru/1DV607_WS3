@@ -7,25 +7,28 @@ namespace BlackJack.model.rules
 {
     class AmericanNewGameStrategy : INewGameStrategy
     {
-        public bool NewGame(Deck a_deck, Dealer a_dealer, Player a_player)
+        public bool NewGame(Deck aDeck, Dealer aDealer, Player aPlayer, DistributeCard distributeCard)
         {
-            Card c;
+//            Card c;
+            distributeCard.NewCard(aDeck, aPlayer);
+//            c = a_deck.GetCard();
+//            c.Show(true);
+//            a_player.DealCard(c);
 
-            c = a_deck.GetCard();
-            c.Show(true);
-            a_player.DealCard(c);
+            distributeCard.NewCard(aDeck, aDealer);
+//            c = a_deck.GetCard();
+//            c.Show(true);
+//            a_dealer.DealCard(c);
 
-            c = a_deck.GetCard();
-            c.Show(true);
-            a_dealer.DealCard(c);
+            distributeCard.NewCard(aDeck, aPlayer);
+//            c = a_deck.GetCard();
+//            c.Show(true);
+//            a_player.DealCard(c);
 
-            c = a_deck.GetCard();
-            c.Show(true);
-            a_player.DealCard(c);
-
-            c = a_deck.GetCard();
-            c.Show(false);
-            a_dealer.DealCard(c);
+            distributeCard.NewCard(aDeck, aDealer, false);
+//            c = a_deck.GetCard();
+//            c.Show(false);
+//            a_dealer.DealCard(c);
 
             return true;
         }
