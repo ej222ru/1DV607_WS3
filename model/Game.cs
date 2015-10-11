@@ -12,9 +12,9 @@ namespace BlackJack.model
 
 
 
-        public Game()
+        public Game(view.WinnerAtDraw winnerAtDraw, view.Soft17 soft17, view.GameRules gameRules)
         {
-            m_dealer = new Dealer(new rules.RulesFactory());
+            m_dealer = new Dealer(new rules.RulesFactory( winnerAtDraw, soft17, gameRules));
             m_player = new Player();
         }
 
