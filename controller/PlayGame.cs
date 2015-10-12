@@ -10,11 +10,15 @@ namespace BlackJack.controller
     {
         model.Game m_game;
         view.IView m_view;
-        public PlayGame(model.Game a_game, view.IView a_view)
+        public PlayGame()
         {
-            m_game = a_game;
-            m_view = a_view;
-            a_game.AddSubscriber(this);
+            SetupGame setup = new SetupGame();
+
+            model.Game game = new model.Game(setup.GetWinnerAtDrawRules(), setup.GetDealer17Rules(), setup.GetGameRules());
+            m_game = game;
+            m_view = setup.GetLanguageView();
+
+            m_game.AddSubscriber(this);
         }
         private void Display()
         {
