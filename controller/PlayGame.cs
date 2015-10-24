@@ -12,10 +12,12 @@ namespace BlackJack.controller
         view.IView m_view;
         public PlayGame()
         {
+            // create a setup controller 
             SetupGame setup = new SetupGame();
 
-            model.Game game = new model.Game(setup.GetWinnerAtDrawRules(), setup.GetDealer17Rules(), setup.GetGameRules());
-            m_game = game;
+            // create a game with config delivered from the setup controller
+            m_game = new model.Game(setup.GetWinnerAtDrawRules(), setup.GetDealer17Rules(), setup.GetGameRules());
+            // Let setup controller create the game view depending on language 
             m_view = setup.GetLanguageView();
 
             m_game.AddSubscriber(this);

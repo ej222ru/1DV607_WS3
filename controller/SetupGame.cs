@@ -7,6 +7,13 @@ namespace BlackJack.controller
 {
     class SetupGame
     {
+        /* Class used to setup/config a game of BlackJack
+        * rules for
+        *  - Who wins at dealer gets 17
+        *  - Who wins at a draw (player-dealer same points)
+        *  - GUI language 
+        *  - game rules how it is played 
+        */
         view.GameSetupView setup;
         view.IView gameView;
 
