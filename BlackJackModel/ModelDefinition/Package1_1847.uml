@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="5288e9e1-7e13-4fc8-9e70-3c94d9d55482"
+  name="view"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="a7683410-bac1-49ae-815f-785f75e657ec"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DBlackJack.view"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <enumeration
+        Id="0015b65f-33c2-4c7b-96f5-a4f4472cc2f4"
+        name="Soft17"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="b597e560-c000-456c-bfe1-210a314b0ef7"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FE:%2F1DV607_WS3%2Fbin%2FDebug%2FBlackJack.exe Namespace%3DBlackJack.view Type%3DSoft17"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0f068063-8dd9-4f68-b0b0-4a80a6dff480"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3c2353e4-6604-4fb9-8ec8-fceb5a82bc6e">
+                <propertyInstance
+                  Id="f9d5d9ca-ef57-454c-a064-827c383648ea"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7989cd50-07c9-4fba-b205-5f823c966bd6">
+                <propertyInstance
+                  Id="c24c2c8e-b3e1-44cd-a659-105f35e38bff"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2dfbb9a4-e3a1-4c71-95ed-a4902edd5d81">
+                <propertyInstance
+                  Id="e45e1412-130c-4c6b-bf19-e9f4ddcec3a1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="1aac3315-f22b-40ee-942a-b135ec511859"
+        name="GameRules"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0bdb2aa4-006e-4353-8001-79c356251bb5"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FE:%2F1DV607_WS3%2Fbin%2FDebug%2FBlackJack.exe Namespace%3DBlackJack.view Type%3DGameRules"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cf1bf973-76f0-4d6f-8672-52fb01badca4"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8fa2aece-7883-45fb-bfd9-1064381cc4b7">
+                <propertyInstance
+                  Id="05ad6dff-516c-42b8-868c-972afebb16c9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="98652fdb-1152-4c75-a839-ccd8005e9572">
+                <propertyInstance
+                  Id="93d3c4c8-651c-4f78-a130-edee13e29d14"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2fa1c5fb-671a-4a60-9fb8-11502fdedd0a">
+                <propertyInstance
+                  Id="29493888-ff73-467a-9566-dbb11af1b45d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6d351e8d-3bf7-4221-a987-e074a241c9c0"
+        name="IView"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="311e143f-3562-4f02-afbd-823ff12dc5f4"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FE:%2F1DV607_WS3%2Fbin%2FDebug%2FBlackJack.exe Namespace%3DBlackJack.view Type%3DIView"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="88d27212-ddd9-4728-a3b3-84f14cfb87e9"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2317a1fb-e08d-47d6-afb7-21e099e296b9">
+                <propertyInstance
+                  Id="17e2baf6-843d-43ac-a504-0f7ee5f0cf5f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0411221b-e4fc-4a17-b662-d513b757bc57">
+                <propertyInstance
+                  Id="42004301-e142-4cfe-b389-061e7c8cef6c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3976f937-4335-4fb3-af10-d676d80e7bd4">
+                <propertyInstance
+                  Id="1e199853-7453-45d8-9457-facd69d97dee"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7abb813c-c419-40e3-a914-4561307116af">
+                <propertyInstance
+                  Id="3e9a83ee-3835-479f-afd0-b180be5c9971"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="6837b873-028e-4e1b-8bba-966c51030692"
+        name="WinnerAtDraw"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="4417ddca-ef6e-4827-8864-903decbb7202"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FE:%2F1DV607_WS3%2Fbin%2FDebug%2FBlackJack.exe Namespace%3DBlackJack.view Type%3DWinnerAtDraw"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b8097187-5c42-411b-8626-bdb5ea446516"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b5415520-495a-4390-b67e-d41e587ce677">
+                <propertyInstance
+                  Id="c6d3056f-1462-46e0-b85e-bcf8ec3b15f6"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0b8125fa-465b-4c38-8a7d-4bd26f9c309e">
+                <propertyInstance
+                  Id="96ed9c73-86bf-4f4b-995c-b42bdb27b5aa"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2bfd150-cdd5-4c58-a276-3d5231f24435">
+                <propertyInstance
+                  Id="486e204a-ced9-4ab2-abcc-cfbac7c1d1b6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="d5a1dbb0-bd1d-43a2-96d7-e60143999da4"
+        name="Language"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="b87c46c6-01a8-40b4-b74f-4ed7628a6687"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FE:%2F1DV607_WS3%2Fbin%2FDebug%2FBlackJack.exe Namespace%3DBlackJack.view Type%3DLanguage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1a7434ad-599a-4954-bf3a-42339dbe4733"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="11b0881a-2556-46b1-97d8-64db675e8f4c">
+                <propertyInstance
+                  Id="b2529949-ab3b-4fd5-9845-f7e6dbc09162"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5cff8383-675c-4c06-8438-93c2a0434df0">
+                <propertyInstance
+                  Id="5fd0e7a7-2508-481b-a77f-d2fbd435adff"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="609ff679-6f98-41df-afac-41582f235f7d">
+                <propertyInstance
+                  Id="80c3e388-9c9b-45f1-aec5-d94296ca0756"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -51,8 +51,8 @@ namespace BlackJack.controller
         }
         public void newCardDelt()
         {
-            Display();
             System.Threading.Thread.Sleep(2000);
+            Display();
         }
 
     }

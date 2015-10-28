@@ -5,10 +5,10 @@ using System.Text;
 
 namespace BlackJack.view
 {
-    public enum Language { English = 1, Swedish = 2 };
-    public enum Soft17 { UseSoft17 = 1, NoSoft17 = 2 };
-    public enum WinnerAtDraw { Dealer = 1, Player = 2 };
-    public enum GameRules { American = 1, International = 2 };
+    public enum Language { ENGLISH = 1, SWEDISH = 2 };
+    public enum Soft17 { USESOFT17 = 1, NOSOFT17 = 2 };
+    public enum WinnerAtDraw { DEALER = 1, PLAYER = 2 };
+    public enum GameRules { AMERICAN = 1, INTERNATIONAL = 2 };
     class GameSetupView
     {
 
@@ -19,7 +19,7 @@ namespace BlackJack.view
             System.Console.WriteLine("Decide language: ");
             System.Console.WriteLine("Type '1' for English\n");
             System.Console.WriteLine("Type '2' for Swedish\n");
-            return (GetUserAction() == 1 ? Language.English : Language.Swedish);
+            return (GetUserAction() == 1 ? Language.ENGLISH : Language.SWEDISH);
         }
 
         public WinnerAtDraw GetWinnerAtDrawRules()
@@ -28,7 +28,7 @@ namespace BlackJack.view
             System.Console.WriteLine("Decide who wins at a draw: ");
             System.Console.WriteLine("Type '1' for Dealer\n");
             System.Console.WriteLine("Type '2' for Player\n");
-            return (GetUserAction() == 1 ? WinnerAtDraw.Dealer : WinnerAtDraw.Player);
+            return (GetUserAction() == 1 ? WinnerAtDraw.DEALER : WinnerAtDraw.PLAYER);
         }
         public GameRules GetGameRules()
         {
@@ -36,7 +36,7 @@ namespace BlackJack.view
             System.Console.WriteLine("Decide game strategy rules: ");
             System.Console.WriteLine("Type '1' for American\n");
             System.Console.WriteLine("Type '2' for International\n");
-            return (GetUserAction() == 1 ? GameRules.American : GameRules.International);
+            return (GetUserAction() == 1 ? GameRules.AMERICAN : GameRules.INTERNATIONAL);
         }
         public Soft17 GetDealer17Rules()
         {
@@ -44,7 +44,7 @@ namespace BlackJack.view
             System.Console.WriteLine("Decide dealer soft 17: ");
             System.Console.WriteLine("Type '1' for using soft17 rule\n");
             System.Console.WriteLine("Type '2' for not using soft17 rule\n");
-            return (GetUserAction() == 1 ? Soft17.UseSoft17 : Soft17.NoSoft17);
+            return (GetUserAction() == 1 ? Soft17.USESOFT17 : Soft17.NOSOFT17);
         }
 
         public int GetUserAction()

@@ -20,7 +20,7 @@ namespace BlackJack.model.rules
         }
         public IHitStrategy GetHitRule()
         {
-            if (m_hitRule == view.Soft17.NoSoft17)
+            if (m_hitRule == view.Soft17.NOSOFT17)
                 return new BasicHitStrategy();
             else
                 return new Soft17HitStrategy();
@@ -28,7 +28,7 @@ namespace BlackJack.model.rules
 
         public INewGameStrategy GetNewGameRule()
         {
-            if (m_gameRules == view.GameRules.American)
+            if (m_gameRules == view.GameRules.AMERICAN)
                 return new AmericanNewGameStrategy();
             else
                 return new InternationalNewGameStrategy();
@@ -36,7 +36,7 @@ namespace BlackJack.model.rules
 
         public IWinnerStrategy GetNewWinnerRule()
         {
-            if (m_winnerAtDraw == view.WinnerAtDraw.Dealer)
+            if (m_winnerAtDraw == view.WinnerAtDraw.DEALER)
                 return new StandardWinnerStrategy();
             else
                 return new PlayerPlusWinnerStrategy();

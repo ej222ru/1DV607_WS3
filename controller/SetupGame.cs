@@ -36,11 +36,11 @@ namespace BlackJack.controller
         public view.IView GetLanguageView()
         {
             view.Language selectLanguage = setup.GetLanguage();
-            if (selectLanguage == view.Language.English)
+            if (selectLanguage == view.Language.ENGLISH)
             {
                 gameView = new view.SimpleView();
             }
-            else if (selectLanguage == view.Language.Swedish)
+            else if (selectLanguage == view.Language.SWEDISH)
             {
                 gameView = new view.SwedishView();
             }
